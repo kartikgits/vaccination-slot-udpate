@@ -52,6 +52,7 @@ class CheckUpdates {
         
         let self = this;
 
+        console.log('here in checkupdates')
         request(apiUrl, function (error, response, body) {
             if(error){
                 console.log(error)
