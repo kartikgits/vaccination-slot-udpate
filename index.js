@@ -4,7 +4,7 @@ var cron = require('node-cron')
 const CheckUpdates = require('./CheckUpdates.js')
 
 const app=express()
-const port=process.env.PORT || 5000
+const port=process.env.PORT || 5002
 app.use(cors())
 
 //running a cron job every 1 minute

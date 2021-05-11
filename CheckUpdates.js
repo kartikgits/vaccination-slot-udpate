@@ -56,7 +56,8 @@ class CheckUpdates {
             if(error){
                 console.log(error)
             }else if(response && response.statusCode===200){
-                self.processApiResponse(body)
+                console.log(response)
+                // self.processApiResponse(body)
             }
         });
         
