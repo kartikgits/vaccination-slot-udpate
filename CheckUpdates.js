@@ -52,8 +52,8 @@ class CheckUpdates {
         
         let self = this;
 
-        console.log('here in checkupdates')
         request(apiUrl, function (error, response, body) {
+            console.log('here in request')
             if(error){
                 console.log(error)
             }else if(response && response.statusCode===200){
