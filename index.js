@@ -8,7 +8,7 @@ const port=process.env.PORT || 5000
 app.use(cors())
 
 //running a cron job every 1 minute
-cron.schedule('*/5 * * * *', () => {
+cron.schedule('*/1 * * * *', () => {
     console.log('running a task 5 minutes')
     //call function here
     CheckUpdates.requestApi()
