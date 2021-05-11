@@ -23,7 +23,7 @@ class CheckUpdates {
         for(var i=0;i<centers.length;i++){
             let sessions=centers[i].sessions
             for(var j=0;j<sessions.length;j++){
-                if(sessions[j].min_age_limit<45 && sessions[j].available_capacity>0){
+                if(sessions[j].min_age_limit<46 && sessions[j].available_capacity>0){
                     centersAvailable.push(centers[i].name)
                 }
             }
@@ -31,8 +31,10 @@ class CheckUpdates {
 
         if(centersAvailable.length>0){
             //send to telegram bot
+            let chatIDProduction='-1001438859776'
+            let chatIDTrial='-433292314'
             let text=encodeURI("Slots available at:\n\n\n"+centersAvailable.join('\r\n\n')+"\n\n\nPlease book slots at accessible locations only. #StaySafe")
-            let telegramSendUrl=`https://api.telegram.org/bot1777568327:AAElaoDDA8SmazbQpFDP1l5vPbJIykjTlks/sendMessage?chat_id=-1001438859776&text=${text}`
+            let telegramSendUrl=`https://api.telegram.org/bot1777568327:AAElaoDDA8SmazbQpFDP1l5vPbJIykjTlks/sendMessage?chat_id=${chatIDTrial}&text=${text}`
             axios.get(telegramSendUrl)
                 .then(response => {
                     // console.log(response)
